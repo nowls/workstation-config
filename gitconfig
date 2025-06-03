@@ -1,0 +1,49 @@
+[user]
+    name = "Sean Nowlan"
+    #email = "CHANGEME"
+    #signingkey = "CHANGEME"
+
+[color]
+    ui = auto
+
+[core]
+    autocrlf = input
+    safecrlf = true
+    editor = vim
+
+[alias]
+    co = checkout
+    ci = commit
+    diffc = diff --cached
+    st = status
+    stat = status
+    br = branch
+    bra = branch -a
+    #hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=iso
+    hist = log --pretty=format:\"%C(auto)%h %ad | %s%d [%an]%C(auto,reset)\" --graph --date=iso
+    history = log --pretty=format:\"%C(auto)%h %ad | %s%d [%an]%C(auto,reset)\" --graph --date=iso
+    type = cat-file -t
+    dump = cat-file -p
+    showfiles = show --pretty="" --name-only
+    tagcommit = rev-list -1
+
+[difftool]
+    prompt = true
+
+[diff]
+    tool = nvimdiff
+
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+
+[init]
+    defaultBranch = main
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
