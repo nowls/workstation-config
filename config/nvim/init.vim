@@ -49,6 +49,9 @@ EOF
 " Expose :ToggleKernelSpacing command
 command! ToggleKernelSpacing lua _G.toggle_kernel_spacing()
 
+" Allow copy/paste to system clipboard (must have xclip installed)
+set clipboard=unnamedplus
+
 " vim-plug
 call plug#begin()
 " Note: the github link maps to 'nvim-tree/nvim-web-devicons'
