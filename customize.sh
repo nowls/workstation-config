@@ -3,13 +3,13 @@
 set -e
 
 echo "***** Install tools *****"
-sudo apt install awscli htop tmux silversearcher-ag ipython3 curl
+sudo apt install awscli htop tmux silversearcher-ag ipython3 curl xclip
 
 echo ""
 echo ""
 
 echo "***** Install development tools *****"
-sudo apt install build-essential gcc g++ autoconf cmake git git-lfs universal-ctags ninja-build gettext flex bison
+sudo apt install build-essential gcc g++ autoconf libtool cmake git git-lfs universal-ctags ninja-build gettext flex bison shellcheck
 
 echo ""
 echo ""
